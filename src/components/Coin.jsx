@@ -81,35 +81,37 @@ const CoinData = () => {
       </h1>
 
       {/* Coin Description */}
-      <p className="text-gray-300 mb-6 p-5 text-justify leading-relaxed">
+      {/* p className="text-gray-300 mb-6 p-5 text-justify leading-relaxed">
         {coin.description?.en || "No description available."}
-      </p>
-
-      {/* Chart */}
+      </p> */}
+{/* Chart */}
       <div className="my-8">
         <h2 className="text-2xl font-semibold mb-4 text-center">Price Trend (Last 7 Days)</h2>
         <Line data={data} />
       </div>
 
       {/* Categories */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-semibold mb-2">Categories</h2>
+      <div className=" mt-7 mb-7">
+        <h2 className="text-xl md:text-4xl font-semibold mb-5">Categories</h2>
+        <hr className=' mb-2' />
         <ul className="list-disc pl-6">
           {coin.categories?.map((category, index) => (
-            <li key={index}>{category}</li>
+            <li className='p-1' key={index}>{category}</li>
           ))}
         </ul>
       </div>
 
       {/* Hashing Algorithm */}
-      <div className="mb-6">
+      <div className="mb-6 mt-7">
         <h2 className="text-2xl font-semibold mb-2">Hashing Algorithm</h2>
+        <hr className=' mb-2' />
         <p>{coin.hashing_algorithm || "N/A"}</p>
       </div>
 
       {/* Block Time */}
-      <div className="mb-6">
+      <div className="mb-6 mt-7">
         <h2 className="text-2xl font-semibold mb-2">Block Time</h2>
+        <hr className=' mb-2 ' />
         <p>{coin.block_time_in_minutes ? `${coin.block_time_in_minutes} minutes` : "N/A"}</p>
       </div>
     </div>
