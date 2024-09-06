@@ -33,7 +33,7 @@ const Navbar = () => {
           <div>
             <img src={img} alt="img" className='w-11 h-11 rounded-xl' />
           </div>
-          <div className='animate-pulse'>
+          <div className=''>
             CryptoX
           </div>
         </Link>
